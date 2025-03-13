@@ -13,14 +13,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
         .registration-container {
             display: flex;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 600px;
             padding: 20px;
@@ -33,7 +33,7 @@
             text-align: center;
         }
         .registration-form h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -48,7 +48,7 @@
             margin-right: 10px;
             color: #666;
         }
-        input[type="text"], input[type="password"], input[type="email"] {
+        input {
             border: none;
             outline: none;
             width: 100%;
@@ -93,27 +93,56 @@
             object-fit: cover;
         }
         .footer {
+            background-color: #dfe3eb;
+            width: 100%;
             margin-top: 20px;
+            padding: 15px;
             text-align: center;
-            font-size: 12px;
-            color: #666;
+            font-size: 14px;
+            color: #333;
+            border-radius: 5px;
         }
-        .footer p {
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .footer-column {
+            text-align: left;
+        }
+        .footer-column h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .footer-column h4 i {
+            margin-right: 8px;
+            color: red;
+        }
+        .footer-column p {
+            font-size: 14px;
             margin: 5px 0;
         }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .social-icons a {
-            margin: 0 10px;
+        .footer-column a {
             text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 10px;
             color: #666;
         }
     </style>
 </head>
 <body>
+
+    <!-- Form Registrasi -->
     <div class="registration-container">
         <div class="registration-form">
             <h2>REGISTRASI</h2>
@@ -141,20 +170,34 @@
             </form>
         </div>
         <div class="image-container">
-            <img src="{{ asset('images/logo.jpg') }}" alt="Profile Image"> <!-- Ganti dengan path yang benar -->
+            <img src="{{ asset('images/logo.jpg') }}" alt="Logo Galaxy Store">
         </div>
     </div>
+
+    <!-- Footer -->
     <div class="footer">
-        <p>Alamat</p>
-        <p>IKUTI KAMI : Instagram, Shopee</p>
-        <p>Kontak Kami: 0812345678908</p>
-        <p>Kontak Kami: 0812345678908</p>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4><i class="fas fa-map-marker-alt"></i> Alamat</h4>
+                <p>Galaxy Store, Srono</p>
+            </div>
+            <div class="footer-column">
+                <h4><i class="fas fa-bullhorn"></i> Ikuti Kami</h4>
+                <p>
+                    <a href="#">Instagram</a>
+                    <a href="#">Shopee</a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4><i class="fas fa-phone"></i> Kontak Kami</h4>
+                <p>0812-3456-7890</p>
+                <p>0812-9876-5432</p>
+            </div>
         </div>
-        <p>Copyright © 2025. Project Based Learning</p>
+        <div class="footer-bottom">
+            © 2025 Galaxy Store - All Rights Reserved.
+        </div>
     </div>
+
 </body>
 </html>

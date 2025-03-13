@@ -79,6 +79,13 @@
             font-weight: bold;
             color: black;
         }
+        .forgot-password {
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 10px;
+        }
         .image-container {
             width: 50%;
             display: flex;
@@ -92,28 +99,56 @@
             border-radius: 20px;
             object-fit: cover;
         }
-        .footer {
+        .footer-container {
+            width: 100%;
+            background-color: #e5eaf2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer div {
+            text-align: center;
+        }
+        .footer h3 {
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer i {
+            margin-right: 8px;
+            color: #d84315;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            color: #ff6600;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #333;
+            margin: 5px 0;
+        }
+        .footer-bottom {
             text-align: center;
             font-size: 12px;
             color: #666;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
             margin-top: 10px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #666;
         }
     </style>
 </head>
 <body>
+
     <div class="login-container">
         <div class="login-form">
             <h2>LOGIN</h2>
@@ -128,22 +163,33 @@
             <button class="btn">DAFTAR</button>
             <p class="divider">ATAU</p>
             <p class="link">DAFTAR untuk memiliki akun</p>
+            <p class="forgot-password">Lupa Password?</p>
         </div>
         <div class="image-container">
             <img src="{{ asset('images/logo.jpg') }}" alt="Profile Image"> <!-- Ganti dengan path yang benar -->
         </div>
     </div>
-    <div class="footer">
-        <p>Alamat</p>
-        <p>IKUTI KAMI : Instagram, Shopee</p>
-        <p>Kontak Kami: 0812345678908</p>
-        <p>Kontak Kami: 0812345678908</p>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+
+    <div class="footer-container">
+        <div class="footer">
+            <div>
+                <h3><i class="fas fa-map-marker-alt"></i> Alamat</h3>
+                <p>Galaxy Store, Srono</p>
+            </div>
+            <div>
+                <h3><i class="fas fa-bullhorn"></i> Ikuti Kami</h3>
+                <p><a href="#">Instagram</a> <a href="#" style="color: orange;">Shopee</a></p>
+            </div>
+            <div>
+                <h3><i class="fas fa-phone-alt"></i> Kontak Kami</h3>
+                <p>0812-3456-7890</p>
+                <p>0812-9876-5432</p>
+            </div>
         </div>
-        <p>Copyright © 2025. Project Based Learning</p>
+        <div class="footer-bottom">
+            © 2025 Galaxy Store - All Rights Reserved.
+        </div>
     </div>
+
 </body>
 </html>
